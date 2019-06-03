@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice document</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+
+<body onresize="getWindowSize()">
+
+    <ol>
+        <caption>Steck</caption>
+        <li>serchNumber -> tasks</li>
+        <li>cat object</li>
+    </ol>
+
+
+    <!-- <div>
+        <form>
+            <input id="number-one" type="text" placeholder="Some number">
+            <input id="number-two" type="text" placeholder="Some number">
+            <p><input id="result" type="text" placeholder="Result"></p>
+        </form>
+        <button onclick="serchNumber()">Calc</button>
+    </div>
+
+    <div>
+        <form>
+            <textarea id="code-place" cols="30" rows="10" placeholder="Type a code"></textarea>
+            <input id="result-place" type="text" placeholder="Result">
+        </form>
+        <button onclick="getResult()">Go!</button>
+    </div> -->
+
+    <div class="test-create">
+        <form>
+            <fieldset class="input-output">
+                <legend>data</legend>
+                <textarea id="param-big" cols="30" rows="10"></textarea><br>
+                <input id="param-small-one" type="text">
+                <input id="param-small-two" type="text">
+            </fieldset>
+
+            <div class="options">
+                <fieldset id="output">
+                    <legend>output</legend>
+                    <p><input type="radio" name="output" value="0" checked>HTML</p>
+                    <p><input type="radio" name="output" value="1">alert</p>
+                    <p><input type="radio" name="output" value="2">console.log</p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>tasks</legend>
+                    <div id="tasks"></div>
+                </fieldset>
+            </div>
+
+            <fieldset class="input-output">
+                <legend>result</legend>
+                <p id="result-function">Some text</p>
+            </fieldset>
+        </form>
+        <button onclick="goFunction()">Go</button>
+    </div>
+
+
+    <div class="exercises">
+        <h1>Exercises</h1>
+        <div class="DOM">
+            <div>
+                <h2>DOM</h2>
+                <h3>&#8470; 1</h3>
+                <p id="text">JavaScript Exercises - w3resource</p>
+                <div>
+                    <button id="js-style" onclick="jsStyle()">Style</button>
+                </div>
+            </div>
+
+            <div>
+                <h3>&#8470; 2</h3>
+                <form id="form1" onsubmit="getFormValue()">
+                    First name: <input type="text" name="fname" value="David"><br>
+                    Last name: <input type="text" name="lname" value="Beckham"><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div>
+                <h3>&#8470; 3</h3>
+                <p id="changing-text">Changed text</p>
+                <button onclick="changeP()">Change</button>
+            </div>
+
+            <div>
+                <h3>&#8470; 4</h3>
+                <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self"
+                        href="https://www.w3resource.com/">w3resource</a></p>
+                <button onclick="getAttributes()">Click here to get attributes value</button>
+            </div>
+
+            <div>
+                <h3>&#8470; 5</h3>
+                <table id="sampleTable">
+                    <tr>
+                        <td>Row1 cell1</td>
+                        <td>Row1 cell2</td>
+                    </tr>
+                    <tr>
+                        <td>Row2 cell1</td>
+                        <td>Row2 cell2</td>
+                    </tr>
+                </table><br>
+                <input type="button" onclick="insertRow()" value="Insert row">
+            </div>
+
+            <div>
+                <h3>&#8470; 6</h3>
+                <table id="my-table">
+                    <tr>
+                        <td>Row1 cell1</td>
+                        <td>Row1 cell2</td>
+                    </tr>
+                    <tr>
+                        <td>Row2 cell1</td>
+                        <td>Row2 cell2</td>
+                    </tr>
+                    <tr>
+                        <td>Row3 cell1</td>
+                        <td>Row3 cell2</td>
+                    </tr>
+                </table>
+                <form>
+                    <input id="content-my-table" type="text" placeholder="content">
+                    <input id="row-my-table" type="number" placeholder="row">
+                    <input id="column-my-table" type="number" placeholder="column">
+                    <input type="button" onclick="changeContent()" value="Change content">
+                </form>
+            </div>
+
+            <div>
+                <h3>&#8470; 7</h3>
+                <table id="myTable-create"></table>
+                <form>
+                    <input id="table-create-row" type="number" placeholder="row">
+                    <input id="table-create-column" type="number" placeholder="column">
+                    <input type="button" onclick="createTable()" value="Create the table">
+                </form>
+            </div>
+
+            <div>
+                <h3>&#8470; 8</h3>
+                <select id="colorSelect">
+                    <option>Red</option>
+                    <option>Green</option>
+                    <option>White</option>
+                    <option>Black</option>
+                </select>
+                <input type="button" onclick="removeColor()" value="Select and Remove">
+                </form>
+            </div>
+
+            <div>
+                <h3>&#8470; 9</h3>
+                Select your favorite Color :
+                <select id="mySelect">
+                    <option>Red</option>
+                    <option>Green</option>
+                    <option>Blue</option>
+                    <option>White</option>
+                    <option>White</option>
+                    <option>White</option>
+                </select>
+                <input type="button" onclick="getOptions()" value="Count and Output all items">
+                </form>
+            </div>
+
+            <div>
+                <h3>&#8470; 10</h3>
+                <form>
+                    <fieldset>
+                        <p>Input radius value and get the volume of a sphere.</p>
+                        <p>Radius</p>
+                        <input type="text" id="sphere-radius">
+                        <p>Volume</p>
+                        <input type="text" id="sphere-volume">
+                        <p><input type="submit" value="Calculate" onclick="calcVolumeSphere()"></p>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div>
+                <h3>&#8470; 11</h3>
+                <div id="display-random-img"></div>
+                <button onclick="showRandomImage()">Display a random image</button>
+            </div>
+
+            <div>
+                <h3>&#8470; 12</h3>
+                <p>
+                    [<a href="#" onmouseover="highlightAllWords()" onmouseout="normalAllWords()">
+                        On mouse over here bold words of the following paragraph will be highlighted
+                    </a>]
+                </p>
+                <p id="words">
+                    <strong>We</strong> have just started <strong>this</strong> section for the users
+                    (<strong>beginner</strong> to intermediate) who <strong>want</strong> to work with
+                    <strong>various</strong> JavaScript <strong>problems</strong> and write scripts online to
+                    <strong>test</strong> their JavaScript <strong>skill</strong>.
+                </p>
+            </div>
+
+            <div>
+                <h3>&#8470; 13</h3>
+                <p id="show-window-size">Window size</p>
+            </div>
+        </div>
+
+        <div class="Object">
+            <h2>Object</h2>
+            <div>
+                <h3>&#8470; 1</h3>
+                <button onclick="getObjectProperties(student)">List properties of object (see in console.log)</button>
+                <p id="put-object-properties"></p>
+            </div>
+            <div>
+                <h3>&#8470; 2</h3>
+                <button onclick="deleteObjectPropertie()">Delete object propertie (see in console.log)</button>
+            </div>
+            <div>
+                <h3>&#8470; 3</h3>
+                <button onclick="getObjectLength()">Get the length of an object</button>
+                <p id="put-object-length">Object length: </p>
+            </div>
+            <div>
+                <h3>&#8470; 4</h3>
+                <button onclick="displayReadingStatus(libraryOne)">
+                    Display the reading status (see in console.log)
+                </button>
+            </div>
+            <div>
+                <h3>&#8470; 5</h3>
+                <button onclick="calcAndOtputCylinder()">
+                    Get the volume of a Cylinder with four decimal places using object classes
+                </button>
+                <p><input type="number" id="cyl-num-one"></p>
+                <p><input type="number" id="cyl-num-two"></p>
+                <p id="output-cylinder">Volume = </p>
+            </div>
+            <div>
+                <h3>&#8470; 6</h3>
+                <button onclick="getBubbleSortAlgorithm([6,4,0,3,-2,1])">
+                    Bubble Sort algorithm (see in console.log)
+                </button>
+            </div>
+            <div>
+                <h3>&#8470; 7 --?</h3>
+                <button onclick="returnsSubsetOfString()">
+                    Returns a subset of a string (see in console.log)
+                </button>
+            </div>
+            <div>
+                <h3>&#8470; 8</h3>
+                <!-- <button onclick="createClock()">Create a Clock</button>
+                <button onclick="createClockTimer()">Create a -->
+                    Clock</button>
+                <p id="clock-place"></p>
+                <button onclick="clearInterval(createClockTimer)">Stop clock</button>
+
+                <p id="demo"></p>
+
+                <button onclick="clearInterval(myVar)">Stop time</button>
+            </div>
+            <div>
+                <h3>&#8470; 9</h3>
+                <button onclick="calculateAreaAndPerimeterOfCircle()">
+                    Calculate the area and perimeter of a circle
+                </button>
+                <p>Circle radius
+                    <input type="number" placeholder="tipe circle radius" id="circle-radius">
+                </p>
+                <p>Circle area
+                    <input type="number" id="output-circle-area">
+                </p>
+                <p>Circle perimeter
+                    <input type="number" id="output-circle-perimeter">
+                </p>
+            </div>
+            <div>
+                <!-- <h3>&#8470; 10</h3>
+                <button onclick="()"></button>
+                <p id=""></p>
+            </div> -->
+                <!-- <div>
+                <h3>&#8470; 11</h3>
+                <button onclick="()"></button>
+                <p id=""></p>
+            </div> -->
+            </div>
+
+            <div class="JavaScript-conditional-statements-and-loops">
+                <h2>JavaScript conditional statements and loops</h2>
+                <div>
+                    <h3>&#8470; 1</h3>
+
+                </div>
+                <div>
+                    <h3>&#8470; 2</h3>
+
+                </div>
+                <div>
+                    <h3>&#8470; 3</h3>
+
+                </div>
+                <div>
+                    <h3>&#8470; 4</h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="js-notes">NOTES</h1>
+
+            <ol>
+                <caption>JavaScript can "display" data in different ways:</caption>
+                <li>Writing into an HTML element, using <span class="mark-js">innerHTML</span>.</li>
+                <li>Writing into the HTML output using <span class="mark-js">document.write()</span>.</li>
+                <li>Writing into an alert box, using <span class="mark-js">window.alert()</span>.</li>
+                <li>Writing into the browser console, using <span class="mark-js">console.log()</span>.</li>
+            </ol>
+
+            <p>
+                <span class="mark-tec"><b>Statements</b></span> --
+                programming instructions (a list of "instructions" to be "executed" by a computer).
+            </p>
+
+            <ol>
+                <caption>JavaScript statements are composed of:</caption>
+                <li>Values</li>
+                <li>Operators</li>
+                <li>Expressions</li>
+                <li>Keywords</li>
+                <li>Comments</li>
+            </ol>
+
+            <p>Semicolons separate JavaScript statements.</p>
+
+            <p>
+                Fixed values are called <span class="mark-tec">literals (константа)</span>.
+                Variable values are called <span class="mark-tec">variables</span>.
+            </p>
+
+            <p>In a programming language, <b>variables</b> are used to <b>store</b> data values.</p>
+            <p>
+                JavaScript uses the <span class="mark-js">var</span> keyword to
+                <span class="mark-tec">declare</span> variables.
+            </p>
+            <p>
+                An <b>equal sign (<span class="mark-js">=</span>)</b> is used to <span class="mark-tec">assign
+                    values</span> to variables.
+            </p>
+
+            <p>
+                JavaScript uses an <span class="mark-tec">assignment operator ( = )</span> to <b>assign</b> values to
+                variables.
+            </p>
+        </div>
+        <script src="practice.js"></script>
+</body>
+
+</html>

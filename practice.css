@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    /* padding: 10px 30px; */
+    padding: 1vw 3vw;
+    font-family: arial;
+
+    --color-text: rgb(37, 32, 32);
+    --color-button: rgb(180, 21, 154);
+    --color-headline-one: rgb(194, 132, 18);
+    --color-headline-two: rgb(36, 161, 10);
+    --color-tec: red;
+    /* --color-js: rgb(140, 0, 255); */
+    --color-js: rgb(0, 89, 255);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    line-height: 4vw;
+}
+
+h1 {
+    color: var(--color-headline-one);
+}
+
+h2 {
+    color: var(--color-headline-two);
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.js-notes p {
+    color: var(--color-text);
+    font-size: 1em;
+    line-height: 2vw;
+}
+
+.js-notes caption {
+    padding-bottom: 10vw;
+}
+
+.mark-tec {
+    color: var(--color-tec);
+}
+
+.mark-js {
+    color: var(--color-js);
+}
+
+button {
+    font-size: 1em;
+    margin: 1vw 0;
+}
+
+.test-create {}
+
+.test-create form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.test-create textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.input-output {
+    width: 100%;
+}
+
+.input-output input {
+    width: 100%;
+}
+
+.options p {
+    white-space: nowrap;
+    margin: 0;
+}
+
+.exercises table,
+th,
+td {
+    border: 1px solid black;
+}
+
+.test-create button {
+    display: block;
+    text-align: center;
+}
